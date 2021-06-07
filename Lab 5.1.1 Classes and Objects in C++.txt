@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Person {
+	public:
+		string name;
+		int age;
+		string email;
+};
+
+string FirstLastName(Person* person) {
+	return person -> name + " " + person->lastName;
+}
+
+void print(Person* person) {
+	cout << FirstLastName(person) << " is " << person->age << " years old" << endl;
+}
+
+
+int main() {
+	Person person;
+	person.name = "Marry";
+	person.age = 20;
+	person.email = "1@gmail.com";
+	cout << "Meet " << person.name << "\n";
+
+	Person secondPerson;
+	person.name = "Harry";
+	person.age = 26;
+	person.email = "2@gmail.com";
+	cout << "Meet " << secondPerson.name << "\n";
+
+	return 0;
+}
